@@ -1,0 +1,63 @@
+<?page title="Game" contentType="text/html;charset=UTF-8"?>
+<zk>
+<window title="N Game 3lox" border="normal" apply="comp.app3lox.ctrl.GameCtrl">
+<label id = "lblsaludo" value="New Game"/>
+
+<grid>
+            <columns>
+                <column label="Jugador 1" width="120px" />
+                <column label="Jugador 2" />
+                <column label="Tamaño n de la matriz" width="200px" />
+            </columns>
+            <rows>
+                <row>
+                    <hlayout>
+                        <textbox value="@bind(fx.userName)"
+                            width="150px" tabindex="1" />
+                    </hlayout>
+                    <hlayout>
+                        <textbox value="@bind(fx.userName)"
+                            width="150px" tabindex="1" />
+                    </hlayout>
+                    <hlayout>
+                        <textbox value="@bind(fx.userName)"
+                            width="150px" tabindex="1" />
+                    </hlayout>
+                </row>
+               </rows>
+               </grid>
+               
+<label id = "lblGameBoard" value="Game Board"/>
+               
+	<grid>
+<columns>
+<column hflex="4"></column>
+<column hflex="5"></column>
+</columns>
+<rows>
+<row>
+<button id = "btnEvent" label = "                 "/>
+<button id = "btnEvent1" label = "                 "/>
+</row>
+<row>
+<button id = "btnEvent2" label = "                 "/>
+<button id = "btnEvent3" label = "                 "/>
+</row>
+</rows>
+</grid>
+
+<label id = "lblhistory" value="Games History"/>
+
+	<listbox id="lbxGame">
+	
+		<listhead>
+		
+			<listheader label="playerOne" />
+			<listheader label="playerTwo" />
+			<listheader label="winner" />
+			<listheader label="orderOfMatrix" />
+		
+		</listhead>					
+	</listbox>
+</window>
+</zk>
